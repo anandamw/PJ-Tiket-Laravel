@@ -8,6 +8,8 @@ class DashboardController extends Controller
 {
     public function index()
     {
+        toast('Selamat datang di halaman admin!', 'info');
+
         return view('admin.dashboard');
     }
 }

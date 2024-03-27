@@ -5,7 +5,8 @@
             <div class="form-group mb-4">
                 <label class="label">First Name</label>
                 <div class="form-group position-relative">
-                    <input type="text" class="form-control text-dark ps-5 h-58" placeholder="Enter Name">
+                    <input type="text" name="" required class="form-control text-dark ps-5 h-58"
+                        placeholder="Enter Name">
                     <i
                         class="ri-user-line position-absolute top-50 start-0 translate-middle-y fs-20 text-gray-light ps-20"></i>
                 </div>
@@ -15,7 +16,8 @@
             <div class="form-group mb-4">
                 <label class="label">Last Name</label>
                 <div class="form-group position-relative">
-                    <input type="text" class="form-control text-dark ps-5 h-58" placeholder="Enter Name">
+                    <input type="text" name="" required class="form-control text-dark ps-5 h-58"
+                        placeholder="Enter Name">
                     <i
                         class="ri-user-line position-absolute top-50 start-0 translate-middle-y fs-20 text-gray-light ps-20"></i>
                 </div>
@@ -25,7 +27,8 @@
             <div class="form-group mb-4">
                 <label class="label">Email Address</label>
                 <div class="form-group position-relative">
-                    <input type="email" class="form-control text-dark ps-5 h-58" placeholder="Enter Email Address">
+                    <input type="email" name="" required class="form-control text-dark ps-5 h-58"
+                        placeholder="Enter Email Address">
                     <i
                         class="ri-mail-line position-absolute top-50 start-0 translate-middle-y fs-20 text-gray-light ps-20"></i>
                 </div>
@@ -35,7 +38,8 @@
             <div class="form-group mb-4">
                 <label class="label">Phone</label>
                 <div class="form-group position-relative">
-                    <input type="number" class="form-control text-dark ps-5 h-58" placeholder="Enter Phone Number">
+                    <input type="number" name="" required class="form-control text-dark ps-5 h-58"
+                        placeholder="Enter Phone Number">
                     <i
                         class="ri-phone-line position-absolute top-50 start-0 translate-middle-y fs-20 text-gray-light ps-20"></i>
                 </div>
@@ -45,7 +49,8 @@
             <div class="form-group mb-4">
                 <label class="label">Address</label>
                 <div class="form-group position-relative">
-                    <input type="number" class="form-control text-dark ps-5 h-58" placeholder="Your Location">
+                    <input type="number" name="" required class="form-control text-dark ps-5 h-58"
+                        placeholder="Your Location">
                     <i
                         class="ri-map-pin-line position-absolute top-50 start-0 translate-middle-y fs-20 text-gray-light ps-20"></i>
                 </div>

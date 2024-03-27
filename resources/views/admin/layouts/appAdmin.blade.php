@@ -37,6 +37,7 @@
             </div>
         </div>
     </div>
+    @include('sweetalert::alert')
 
     @include('admin.layouts.side')
 
