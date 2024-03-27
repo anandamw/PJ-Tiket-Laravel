@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\KonsumenController;
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,5 +17,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('dashboard', [DashboardController::class, 'index']);
-Route::get('konsumen', [KonsumenController::class, 'index']);
+
+// admin 
+
+Route::get('/login', [LoginController::class, 'index']);
+Route::get('/dashboard', [DashboardController::class, 'index']);
+Route::get('/konsumen', [KonsumenController::class, 'index']);
+// end admin
+
+
+
+// user 
+Route::get('/', [UserController::class, 'index']);
+// end user

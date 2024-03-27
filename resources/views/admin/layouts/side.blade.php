@@ -808,60 +808,16 @@
                                         data-bs-toggle="dropdown" aria-expanded="false">
                                         <i data-feather="mail"></i>
                                     </button>
-                                    <div class="dropdown-menu dropdown-lg p-0 border-0 p-4">
-                                        <h5
-                                            class="m-0 p-0 fw-bold d-flex justify-content-between align-items-center border-bottom pb-3 mb-4">
-                                            <span>Email </span>
-                                            <button class="p-0 m-0 bg-transparent border-0">Clear All</button>
-                                        </h5>
-                                        <div class="notification-menu">
-                                            <a href="notification.html" class="dropdown-item p-0">
-                                                <div class="d-flex align-items-center">
-                                                    <div class="flex-shrink-0">
-                                                        <img src="{{ asset('') }}assets/images/pdf.svg"
-                                                            alt="pdf">
-                                                    </div>
-                                                    <div class="flex-grow-1 ms-3">
-                                                        <h4>Help/Support Desk</h4>
-                                                        <span>11:47 PM Wednesday</span>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </div>
-                                        <div class="notification-menu">
-                                            <a href="notification.html" class="dropdown-item p-0">
-                                                <div class="d-flex align-items-center">
-                                                    <div class="flex-shrink-0">
-                                                        <img src="{{ asset('') }}assets/images/notifications-1.jpg"
-                                                            alt="notifications">
-                                                    </div>
-                                                    <div class="flex-grow-1 ms-3">
-                                                        <h4>Create a new project for client</h4>
-                                                        <span>April, 18</span>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </div>
-                                        <div class="notification-menu mb-0">
-                                            <a href="notification.html" class="dropdown-item p-0">
-                                                <div class="d-flex align-items-center">
-                                                    <div class="flex-shrink-0">
-                                                        <img src="{{ asset('') }}assets/images/notifications-2.jpg"
-                                                            alt="notifications">
-                                                    </div>
-                                                    <div class="flex-grow-1 ms-3">
-                                                        <h4>Project Management</h4>
-                                                        <span>April, 19</span>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </div>
-                                        <a href="notification.html"
-                                            class="dropdown-item text-center text-primary d-block view-all pt-3 pb-0 fw-semibold">
-                                            View All
-                                            <i data-feather="chevron-right"></i>
-                                        </a>
-                                    </div>
+
+                                </div>
+                            </li>
+                            <li class="header-right-item">
+                                <div class="dropdown notifications email">
+                                    <button class="switch-toggle btn btn-secondary border-0 p-0 settings-btn dark-btn"
+                                        id="switch-toggle">
+                                        <span class="dark" data-feather="moon"></span>
+                                        <span class="light" data-feather="sun"></span>
+                                    </button>
                                 </div>
                             </li>
                             <li class="header-right-item">

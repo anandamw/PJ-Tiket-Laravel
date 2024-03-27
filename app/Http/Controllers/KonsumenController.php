@@ -10,4 +10,9 @@ class KonsumenController extends Controller
     {
         return view('admin.konsumen');
     }
+
+    public function create_action()
+    {
+        return redirect('/konsumen');
+    }
 }
