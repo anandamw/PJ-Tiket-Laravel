@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CheckoutController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\KonsumenController;
 use App\Http\Controllers\LoginController;
@@ -29,4 +30,5 @@ Route::get('/konsumen', [KonsumenController::class, 'index']);
 
 // user 
 Route::get('/', [UserController::class, 'index']);
+Route::get('/checkout', [CheckoutController::class, 'index']);
 // end user
