@@ -5,7 +5,7 @@
             <div class="card bg-white border-0 rounded-10 mb-4">
                 <div class="card-body p-4">
                     <div class="mb-4 d-flex align-items-center justify-content-between">
-                        <h4 class="fs-18 ">Tabel Konsumen</h4>
+                        <h4 class="fs-18 ">Tabel Payment</h4>
 
                         <button type="button" class="btn btn-primary text-white" data-bs-toggle="offcanvas"
                             data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling"> + Tambah Data</button>
@@ -21,26 +21,18 @@
                                             <tr class="">
                                                 <th scope="col">No</th>
                                                 <th scope="col">
-                                                    Barcode
-                                                </th>
-                                                <th scope="col">
-                                                    Nomer Rekening
-                                                </th>
-                                                <th scope="col">
-                                                    Pembayaran
-                                                </th>
-                                                <th scope="col">
                                                     Nama
                                                 </th>
                                                 <th scope="col">
-                                                    No Telepon
+                                                    Jumlah Tiket
+                                                </th>
+                                                <th scope="col">
+                                                    Total Harga
                                                 </th>
                                                 <th scope="col">
                                                     Waktu Pembelian
                                                 </th>
-                                                <th scope="col">
-                                                    Alamat
-                                                </th>
+
                                                 <th scope="col">
                                                     Aksi
                                                 </th>
@@ -50,39 +42,13 @@
                                             <tr>
                                                 <td>1</td>
                                                 <td>
-                                                    <div
-                                                        class="d-flex justify-content-center text-center align-items-center flex-column ">
-                                                        <div class="flex-shrink-0  ">
-                                                            <img src="{{ asset('') }}assets/images/fake_barcode.png"
-                                                                class=" w-75" alt="user" />
-                                                        </div>
-                                                        <div class=" mt-3">Code :
-                                                            <h4 class="fw-semibold fs-16 mb-0">
-                                                                bsd35h38h92
-                                                            </h4>
-                                                        </div>
-                                                    </div>
-                                                </td>
-
-
-                                                <td>
-                                                    <span>082049534535</span>
-                                                </td>
-                                                <td>
-                                                    <div>
-                                                        <div class="btn btn-success text-white ">
-                                                            50K |
-                                                            EKONOMI</div>
-                                                    </div>
-                                                </td>
-                                                <td>
                                                     <span>Ananda Maulana W</span>
                                                 </td>
                                                 <td>
-                                                    <span>081234567891011</span>
+                                                    <span>2</span>
                                                 </td>
                                                 <td>
-                                                    <span>2024-maret-21</span>
+                                                    <span>200k</span>
                                                 </td>
                                                 <td>
                                                     <span>Bangkalan</span>

@@ -29,6 +29,13 @@
                     <span class="title">Konsumen</span>
                 </a>
             </li>
+
+            <li class="menu-item">
+                <a href="/payment" class="menu-link">
+                    <i data-feather="credit-card" class="menu-icon tf-icons"></i>
+                    <span class="title">Payment</span>
+                </a>
+            </li>
             <li class="menu-item">
                 <a href="javascript:void(0);" class="menu-link menu-toggle active">
                     <i data-feather="mail" class="menu-icon tf-icons"></i>
