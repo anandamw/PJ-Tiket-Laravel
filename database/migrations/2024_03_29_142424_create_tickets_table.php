@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('tickets', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('payment_id')->constrained('payments')->onUpdate('cascade')->onDelete('cascade');
             $table->string('ticket_code')->uniqid();
             $table->enum('category', ['vip','economy']);
             $table->timestamps();
