@@ -12,9 +12,9 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('tickets', function (Blueprint $table) {
-            $table->id();
+            $table->id('ticket_id');
             $table->string('ticket_code')->uniqid();
-            $table->enum('category', ['vip','economy']);
+            $table->enum('category', ['vip', 'economy']);
             $table->timestamps();
         });
     }
