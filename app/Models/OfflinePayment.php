@@ -6,7 +6,7 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
-class Payment extends Model
+class OfflinePayment extends Model
 {
     use HasFactory;
     protected $guarded = ['payment_id'];

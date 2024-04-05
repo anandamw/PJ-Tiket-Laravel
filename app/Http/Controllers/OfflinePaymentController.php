@@ -3,18 +3,17 @@
 namespace App\Http\Controllers;
 
 use App\Models\Ticket;
-use App\Models\Payment;
-use App\Models\Customer;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Models\OfflinePayment;
 
-class PaymentController extends Controller
+class OfflinePaymentController extends Controller
 {
     public function index()
     {
         $allData = [
-            'dataJoin' => Payment::getQueryJoin(),
-            'dataCustomers' => Customer::all(),
+            'dataJoin' => OfflinePayment::getQueryJoin(),
+            'dataCustomers' => OfflinePayment::all(),
             'dataTickets' => Ticket::all()
         ];
         return view('admin.payment.payment', $allData);
@@ -34,7 +33,7 @@ class PaymentController extends Controller
             'price' => $price
         ];
 
-        Payment::create($data);
+        OfflinePayment::create($data);
         toast('Berhasil Tambah Data', 'success');
 
         return redirect('/payment');
@@ -55,7 +54,7 @@ class PaymentController extends Controller
             'payment_code' => $payment_code,
             'price' => $price
         ];
-        Payment::where('payment_id', $id)->update($data);
+        OfflinePayment::where('payment_id', $id)->update($data);
         toast('Berhasil Edit Data', 'success');
 
         return redirect('/payment');
@@ -63,7 +62,7 @@ class PaymentController extends Controller
 
     public function delete_action($id)
     {
-        Payment::where('payment_id', $id)->delete();
+        OfflinePayment::where('payment_id', $id)->delete();
         toast('Berhasil Hapus Data', 'success');
 
         return redirect('/payment');

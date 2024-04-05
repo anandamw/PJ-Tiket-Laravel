@@ -11,10 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('tickets', function (Blueprint $table) {
-            $table->id('ticket_id');
-            $table->string('ticket_code')->uniqid();
-            $table->enum('category', ['vip', 'economy']);
+        Schema::create('online_customers', function (Blueprint $table) {
+            $table->id('id');
+            $table->string('online_code')->uniqid();
+            $table->string('name');
+            $table->string('whatsapp_number');
+            $table->string('address');
             $table->timestamps();
         });
     }
@@ -24,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('tickets');
+        Schema::dropIfExists('online_customers');
     }
 };

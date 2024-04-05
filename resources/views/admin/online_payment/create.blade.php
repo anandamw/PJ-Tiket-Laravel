@@ -1,27 +1,26 @@
 <div class="offcanvas offcanvas-end bg-white" data-bs-scroll="true" data-bs-backdrop="true" tabindex="-1"
-    id="offcanvasScrollingUpdate{{ $itemData->payment_id }}" aria-labelledby="offcanvasScrollingLabel"
+    id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel"
     style="box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px">
     <div class="offcanvas-header bg-body-bg py-3 px-4 mb-4">
         <h5 class="offcanvas-title fs-18" id="offcanvasScrollingLabel">
-            Form Update Payment
+            Form Tambah Payment
         </h5>
         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
     <div class="offcanvas-body px-4">
-
-        <form method="POST" action="/payment/update/{{ $itemData->payment_id }}">
+        <form method="POST" action="/payment/create">
             @csrf
             <div class="row">
                 <div class="col-lg-12">
                     <div class="form-group mb-4">
                         <label class="label">Nama</label>
                         <div class="form-group position-relative">
-                            <select name="customer_id" class="form-select form-control ps-5 h-58"
+                            <select name="online_customer_id" class="form-select form-control ps-5 h-58"
                                 aria-label="Default select example">
                                 <option selected disabled class="text-dark">Pilih :</option>
-                                @foreach ($dataCustomers as $itemCustomers)
-                                    <option class="text-dark" value="{{ $itemCustomers->customer_id }}">
-                                        {{ $itemCustomers->name }}
+                                @foreach ($dataCustomers as $item)
+                                    <option class="text-dark" value="{{ $item->id }}">
+                                        {{ $item->name }}
                                     </option>
                                 @endforeach
                             </select>
@@ -34,13 +33,12 @@
                     <div class="form-group mb-4">
                         <label class="label">Kategori Tiket</label>
                         <div class="form-group position-relative">
-                            @foreach ($dataTickets as $itemTickets)
+                            @foreach ($dataTickets as $category)
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="ticket_id"
-                                        id="category{{ $itemTickets->ticket_id }}" value="{{ $itemTickets->ticket_id }}"
-                                        required>
-                                    <label class="form-check-label" for="category{{ $itemTickets->ticket_id }}">
-                                        {{ $itemTickets->category }}
+                                    <input class="form-check-input" type="radio" name="ticket_id" id="category"
+                                        value="{{ $category->id }}" required>
+                                    <label class="form-check-label" for="category">
+                                        {{ $category->category_ticket }}
                                     </label>
                                 </div>
                             @endforeach
@@ -51,10 +49,10 @@
 
                 <div class="col-lg-12">
                     <div class="form-group mb-4">
-                        <label class="label">Kode Payment </label>
+                        <label class="label">Jumlah Tiket </label>
                         <div class="form-group position-relative">
-                            <input type="number" name="payment_code" value="{{ $itemData->payment_code }}" required
-                                class="form-control text-dark ps-5 h-58" placeholder="Code Payment">
+                            <input type="number" name="ticket_count" required class="form-control text-dark ps-5 h-58"
+                                placeholder="Jumlah Tiket">
                             <i
                                 class="ri-phone-line position-absolute top-50 start-0 translate-middle-y fs-20 text-gray-light ps-20"></i>
                         </div>
@@ -62,10 +60,10 @@
                 </div>
                 <div class="col-lg-12">
                     <div class="form-group mb-4">
-                        <label class="label">Harga</label>
+                        <label class="label">Total Harga</label>
                         <div class="form-group position-relative">
-                            <input type="text" name="price" value="{{ $itemData->price }}" required
-                                class="form-control text-dark ps-5 h-58" placeholder="Your Location">
+                            <input type="text" name="total_price" required class="form-control text-dark ps-5 h-58"
+                                placeholder="Total Harga">
                             <i
                                 class="ri-map-pin-line position-absolute top-50 start-0 translate-middle-y fs-20 text-gray-light ps-20"></i>
                         </div>

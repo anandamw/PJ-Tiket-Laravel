@@ -11,12 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('payments', function (Blueprint $table) {
-            $table->id('payment_id');
-            $table->foreignId('customer_id')->index();
-            $table->foreignId('ticket_id')->index();
-            $table->string('payment_code')->uniqid();
-            $table->bigInteger('price');
+        Schema::create('offline_customers', function (Blueprint $table) {
+            $table->id('id');
+            $table->string('offline_code')->uniqid();
+            $table->string('name');
+            $table->string('ticket_id');
+
             $table->timestamps();
         });
     }
@@ -26,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('payments');
+        Schema::dropIfExists('offline_customers');
     }
 };
