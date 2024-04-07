@@ -24,9 +24,22 @@
             </li>
 
             <li class="menu-item">
-                <a href="/konsumen" class="menu-link">
+                <a href="/customer" class="menu-link">
                     <i data-feather="user" class="menu-icon tf-icons"></i>
-                    <span class="title">Konsumen</span>
+                    <span class="title">Pembeli</span>
+                </a>
+            </li>
+
+            <li class="menu-item">
+                <a href="/payment" class="menu-link">
+                    <i data-feather="credit-card" class="menu-icon tf-icons"></i>
+                    <span class="title">Payment</span>
+                </a>
+            </li>
+            <li class="menu-item">
+                <a href="/tiket" class="menu-link">
+                    <i data-feather="credit-card" class="menu-icon tf-icons"></i>
+                    <span class="title">Tiket</span>
                 </a>
             </li>
             <li class="menu-item">
