@@ -7,6 +7,7 @@
     @vite('resources/css/app.css')
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     <script src="https://unpkg.com/feather-icons"></script>
+
 </head>
 
 <body>
@@ -137,6 +138,24 @@
                 transform: translateY(-8px) rotate(-45deg);
             }
         }
+
+        #preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #eaeaea; /* Ubah opasitas dan warna latar belakang sesuai kebutuhan */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999; /* Pastikan preloader muncul di atas konten lain */
+        }
+
+        #preloader img {
+            width: 200px; /* Sesuaikan ukuran gambar preloader */
+            height: auto;
+        }
     </style>
     <!-- nav  -->
     <header class=" header ">
@@ -171,13 +190,27 @@
         </nav>
     </header>
 
+    <div id="preloader">
+        <img src="{{ asset('') }}assets_user/preloader.svg"  alt="">
+    </div>
 
+    {{-- preloader  --}}
 
 
     @yield('content')
 
 
+
+    
     <script>
+      window.addEventListener('load', function() {
+            // Menampilkan preloader selama 4 detik
+            setTimeout(function() {
+                document.getElementById('preloader').style.display = 'none'; // Menghilangkan preloader
+            }, 3000); // Ubah angka 4000 menjadi 4000 milidetik (4 detik)
+        });
+
+
         const hamburger = document.querySelector(".hamburger");
         const navMenu = document.querySelector(".nav-menu");
         const navLink = document.querySelectorAll(".nav-link");
