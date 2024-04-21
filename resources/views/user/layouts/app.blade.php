@@ -10,7 +10,7 @@
 
 </head>
 
-<body>
+<body >
 
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;1,400&display=swap');
@@ -19,6 +19,7 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            scroll-behavior: smooth
         }
 
         html {
@@ -36,7 +37,7 @@
 
         .header {
             border-bottom: 1px solid #4B092F;
-
+            
         }
 
         .navbar {
@@ -162,24 +163,26 @@
         <nav class="navbar">
             <a href="#" class="nav-logo"><img src="{{ asset('') }}assets_user/img/logo.png" class="w-28 "
                     alt=""></a>
-
             <ul class="nav-menu">
-                {{-- <li class="nav-item">
-                    <a href="#" class="nav-link">Home</a>
-                </li> --}}
+                
                 <li class="nav-item">
-                    <a href="#" class="nav-link">Hubungi Kami</a>
+                    <a href="#home" class="nav-link">Halaman Utama</a>
                 </li>
+                <li class="nav-item">
+                    <a href="https://wa.me/+6281335186699
+                    " class="nav-link">Hubungi Kami</a>
+                </li>
+
                 {{-- <li class="nav-item">
                     <a href="#" class="nav-link">About</a>
                 </li> --}}
 
-                <li data-modal-target="crud-modal" data-modal-toggle="crud-modal"
-                    class="nav-item bg-yellow-400 flex text-white items-center justify-center gap-2 py-1 px-3 rounded-md">
-                    <i data-feather="shopping-cart" class="w-6"></i>
-                    <a href="#" class="text-lg">
-                        Beli Tiket
-                    </a>
+                <li class="nav-item">
+                    <a href="#detailevent" class="nav-link">Detail Event</a>
+                </li>
+             
+                <li class="nav-item">
+                    <a href="#ticketoption" class="nav-link">Beli Tiket</a>
                 </li>
             </ul>
             <div class="hamburger">
@@ -190,9 +193,9 @@
         </nav>
     </header>
 
-    <div id="preloader">
+    {{-- <div id="preloader">
         <img src="{{ asset('') }}assets_user/preloader.svg"  alt="">
-    </div>
+    </div> --}}
 
     {{-- preloader  --}}
 

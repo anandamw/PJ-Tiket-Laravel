@@ -1,7 +1,8 @@
 @extends('user.layouts.app')
 
 @section('content')
-    <main data-aos="fade-down" class="container h-96 lg:h-[600px]  flex items-center lg:pt-11  justify-evenly flex-wrap-reverse gap-2 ">
+
+    <main id="home" data-aos="fade-down" class="container h-96 lg:h-[600px]  flex items-center lg:pt-11  justify-evenly flex-wrap-reverse gap-2 ">
         <img src="{{ asset('') }}assets_user/img/banner.jpg" class=" h-64 w-full lg:h-[500px]  rounded-xl" alt="">
 
         <div class="flex items-center justify-between w-full lg:pb-8">
@@ -41,14 +42,10 @@
     </div>
 
 
-    <div class="container flex h-10 ">
-        <div data-modal-target="crud-modal" data-modal-toggle="crud-modal"
-            class="flex items-center hover:bg-yellow-500 transition-all ease-in bg-yellow-400 gap-2 py-1 px-3 rounded-md pr-7">
-            <i data-feather="shopping-cart" class="w-7 text-white"></i><span class="text-white text-xl">Beli Tiket</span>
-        </div>
-    </div>
+   
 
-    <div class="container mt-5 pb-8">
+
+    <div class="container pt-5 pb-8" id="detailevent">
 
         <div id="accordion-color" data-accordion="collapse"
             data-active-classes="bg-purple dark:bg-gray-800 text-white dark:text-white">
@@ -83,7 +80,7 @@
                     <div class="flex  gap-4 lg:gap-0 mb-2"><i data-feather="map-pin" class="w-8 lg:w-32"></i>
                         <div>
                             <div class="font-bold text-2xl">Lokasi</div>
-                            <div class="text-xl">Jl Adi Poday - Sumenep</div>
+                            <div class="text-xl">Area Parking Gedung Graha Adipoday - Sumenep</div>
                         </div>
                     </div>
 
@@ -114,7 +111,7 @@
                     class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-gray-200 focus:ring-4 focus:ring-purple dark:focus:ring-purple dark:border-gray-700 dark:text-gray-400 hover:bg-purple dark:hover:bg-purple hover:text-white gap-3"
                     data-accordion-target="#accordion-color-body-3" aria-expanded="false"
                     aria-controls="accordion-color-body-3">
-                    <span>What are the differences between Flowbite and Tailwind UI?</span>
+                    <span>Fasilitas</span>
                     <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true"
                         xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
                         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -127,86 +124,21 @@
             <div id="accordion-color-body-3" class="hidden" aria-labelledby="accordion-color-heading-3">
                 <div class="p-5 border border-t-0 border-gray-200 dark:border-gray-700">
                     <p class="mb-2 text-gray-500 dark:text-gray-400">
-                        1. Entry Pass yang valid adalah yang dibeli melalui artatix.co.id
-
-                        2. Satu Entry Pass berlaku untuk satu orang.
-
-                        3. Panitia dan Promotor tidak bertanggung jawab/ tidak ada penggantian kerugian atas pembelian tiket
-                        acara melalui calo/tempat/kanal/platform/ yang bukan mitra resmi penjualan tiket "Lepas Penat Vol.
-                        3”.
-
-                        4. Tiket yang hilang/dicuri tidak akan diganti atau diterbitkan ulang. Meskipun anda memiliki bukti
-                        pembelian. Tiket kalian merupakan tanggung jawab kalian.
-
-                        5. Panitia acara, Promotor, dan Pengisi Acara tidak bertanggung jawab atas biaya transportasi atau
-                        akomodasi yang telah dikeluarkan penonton untuk mengunjungi acara jika seandainya acara harus
-                        dibatalkan atau dipindahkan ke hari dan/atau waktu lain.
-
-                        6. Dalam keadaan keadaan kahar seperti bencana alam, kerusuhan, perang, wabah, dan semua keadaan
-                        darurat yang diumumkan secara resmi oleh Pemerintah. Panitia/penyelenggara/promotor berhak untuk
-                        membatalkan dan/atau merubah waktu acara dan tata letak tempat tanpa pemberitahuan sebelumnya.
-
-                        7. Panitia/Penyelenggara/Promotor berhak untuk, merevisi waktu acara, tata letak tempat dan
-                        kapasitas penonton tanpa pemberitahuan sebelumnya.
-
-                        8. Jika acara dibatalkan, Promotor harus mengembalikan uang pembelian tiket yang sudah dibeli dengan
-                        jangka waktu yang akan diinfokan lebih lanjut oleh Promotor, tetapi akan dipotong biaya bank, biaya
-                        lain-lain dan pembayaran lain yang mungkin dikenakan untuk mentransfer uang kembali ke pelanggan.
-
-                        9. Panitia acara/penanggung jawab tempat acara, promotor, dan pengisi acara tidak bertanggung jawab
-                        atas hilangnya barang-barang pribadi para penonton atau kejadian-kejadian yang mengakibatkan cedera
-                        di semua area acara selama acara berlangsung, apapun alasannya.
-
-                        10. Harap membawa kartu ID asli dan e-Ticket dari artatix.co.id saat melakukan penukaran tiket.
-
-                        11. Promotor berhak untuk:
-
-                        Melarang penonton masuk jika Entry Pass telah digunakan oleh orang lain.
-                        Memproses atau mengajukan hukuman, baik perdata maupun pidana, terhadap pengunjung yang mendapatkan
-                        Entry Pass secara tidak sah, termasuk ditemukannya memalsukan dan menggandakan Entry Pass yang sah
-                        atau memperoleh Entry Pass dengan cara yang tidak sesuai dengan prosedur.
-                        12. Penyelenggara mengambil tindakan tegas, dan berhak mengeluarkan pengunjung dari area Festival
-                        jika tidak mematuhi protokol kesehatan yang telah diterapkan.
-
-                        13. Barang yang boleh dibawa kedalam venue:
-
-                        Membawa kartu identitas dan uang pribadi
-                        Membawa bukti tiket/tanda masuk
-                        Membawa masker dan hand sanitizer
-                        Membawa obat-obatan pribadi
-                        Membawa jas hujan
-                        Membawa handphone / perangkat lainnya
-                        14. Barang yang tidak diperbolehkan dibawa kedalam venue:
-
-                        Minuman beralkohol, obat-obatan terlarang, psikotropika, atau barang yang mengandung zat berbahaya
-                        lainnya.
-                        Senjata tajam/api, bahan peledak, dan benda-benda yang dilarang menurut ketentuan peraturan
-                        perundang-undangan yang berlaku ke dalam venue.
-                        Cairan dan benda yang mudah terbakar.
-                        Barang yang berbahaya untuk orang lain maupun diri sendiri walaupun tidak disebutkan pada peraturan
-                        diatas.
-                        15. Pihak promotor/ penyelenggara acara berhak mengambil, menyita dan tidak mengembalikan kepada
-                        penonton jika ditemukannya barang terlarang saat pengecekan barang.
-
-                        16. Dilarang membuat kerusuhan dalam situasi apapun di dalam area Festival.
-
-                        17. Dilarang membawa anak dibawah umur 6 tahun.
+                        <ul class="ml-5">
+                            <li class="list-disc">UMKM</li>
+                            <li class="list-disc">Toilet</li>
+                            <li class="list-disc">Area Parkir</li>
+                            <li class="list-disc">Musholla</li>
+                        </ul>
                     </p>
-
-                    <p class="mb-2 text-gray-500 dark:text-gray-400">Learn more about these technologies:</p>
-                    <ul class="ps-5 text-gray-500 list-disc dark:text-gray-400">
-                        <li><a href="https://flowbite.com/pro/"
-                                class="text-blue-600 dark:text-blue-500 hover:underline">Flowbite Pro</a></li>
-                        <li><a href="https://tailwindui.com/" rel="nofollow"
-                                class="text-blue-600 dark:text-blue-500 hover:underline">Tailwind UI</a></li>
-                    </ul>
                 </div>
             </div>
         </div>
     </div>
+    @include('user.tiket')
 
 
-    <div class="container ">
+    <div class="container mt-5">
         <footer class="bg-purple dark:bg-gray-900">
             <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
                 <div class="md:flex md:justify-between">
@@ -218,17 +150,10 @@
                         </a>
                     </div>
                     <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
-                        <div>
+                        {{-- <div>
                             <h2 class="mb-6 text-sm font-semibold text-white uppercase dark:text-white">Resources</h2>
-                            {{-- <ul class="text-white dark:text-gray-400 font-medium">
-                                <li class="mb-4">
-                                    <a href="https://flowbite.com/" class="hover:underline">Flowbite</a>
-                                </li>
-                                <li>
-                                    <a href="https://tailwindcss.com/" class="hover:underline">Tailwind CSS</a>
-                                </li>
-                            </ul> --}}
-                        </div>
+                           
+                        </div> --}}
                         <div>
                             <h2 class="mb-6 text-sm font-semibold text-white uppercase dark:text-white">Follow us</h2>
                             <ul class="text-white dark:text-gray-400 font-medium">
@@ -309,94 +234,8 @@
 
     </div>
 
-    {{-- modal  --}}
-
-
-
-
-    <!-- Main modal -->
-    <div id="crud-modal" tabindex="-1" aria-hidden="true"
-        class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
-        <div class="relative p-4 w-full max-w-md max-h-full">
-            <!-- Modal content -->
-            <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
-                <!-- Modal header -->
-                <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600">
-                    <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
-                        Form Beli Tiket
-                    </h3>
-                    <button type="button"
-                        class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
-                        data-modal-toggle="crud-modal">
-                        <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
-                            viewBox="0 0 14 14">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
-                        </svg>
-                        <span class="sr-only">Close modal</span>
-                    </button>
-                </div>
-                <!-- Modal body -->
-                <form class="p-4 md:p-5">
-                    <div class="grid gap-4 mb-4 grid-cols-2">
-                        <div class="col-span-2">
-                            <label for="name"
-                                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Name <span class="text-red-500"> * </span></label>
-                            <input type="text" name="name" id="name"
-                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
-                                placeholder="Type product name" required="">
-                        </div>
-                        <div class="col-span-2 sm:col-span-1">
-                            <label for="address"
-                                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Total Tiket <span class="text-red-500"> * </span></label>
-                            <input type="number" name="address" id="address"
-                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
-                                placeholder="$2999" required="">
-                        </div>
-                        <div class="col-span-2 sm:col-span-1">
-                            <label for="whatsapp_number"
-                                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">No. Whatsapp <span class="text-red-500"> * </span> </label>
-                            <input type="number" name="whatsapp_number" id="whatsapp_number"
-                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
-                                placeholder="$2999" required="">
-                        </div>
-                        <div class="col-span-2 sm:col-span-1">
-                            <label for="category"
-                                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Kategori Tiket <span class="text-red-500"> * </span></label>
-                            <select id="category"
-                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500">
-                                <option selected="">Select category</option>
-                                <option value="VIP">VIP <span class="text-blue-500">Rp, 100.000</span></option>
-                                <option value="REGULAR">REGULAR <span class="">Rp, 50.000</span></option>
-                            </select>
-                        </div>
-                        <div class="col-span-2">
-                            <label for="description"
-                                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Product
-                                Description <span class="text-red-500"> * </span></label>
-                            <textarea id="description" rows="4"
-                                class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                placeholder="Write product description here"></textarea>
-                        </div>
-                    </div>
-                    <button type="submit"
-                        class="text-white inline-flex items-center bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                        <svg class="me-1 -ms-1 w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd"
-                                d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"
-                                clip-rule="evenodd"></path>
-                        </svg>
-                        Simpan
-                    </button>
-                </form>
-            </div>
-        </div>
-    </div>
-
-
-    {{-- modal  --}}
-
+  
+    @include('user.modal')
 
 
 
